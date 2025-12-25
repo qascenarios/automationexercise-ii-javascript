@@ -13,6 +13,6 @@ test('User login flow', async ({ page }) => {
   await loginPage.enterPassword(loginData.password);
   await loginPage.clickLogin();
 
-  // Verify successful login by checking for a logout button or user profile element
+  // Verify successful login by checking for a logout button
   await loginPage.isLogoutButtonVisible('Logout');
 });

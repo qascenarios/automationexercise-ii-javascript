@@ -1,6 +1,4 @@
-import { time } from 'node:console';
-import {BasePage} from './BasePage';
-import { expect } from '@playwright/test';
+import { BasePage } from './BasePage';
 
 class AddProductToCartPage extends BasePage {
   constructor(page) {
@@ -12,7 +10,7 @@ class AddProductToCartPage extends BasePage {
     this.CART_ITEMS = page.locator('td.cart_description h4 a');
   }
 
-    async navigateToProductsPage() {  
+  async navigateToProductsPage() {
     await this.PRODUCTS_PAGE_LINK.click();
   }
 
@@ -30,9 +28,8 @@ class AddProductToCartPage extends BasePage {
 
   async isProductInCart() {
     const numberOfItems = await this.CART_ITEMS.count();
-    return numberOfItems > 0;
+    return numberOfItems;
   }
-
 }
 
 module.exports = { AddProductToCartPage };

@@ -1,11 +1,10 @@
 
 function openUrl(page, endpoint) {
-  const base_url = 'https://automationexercise.com';
-  const url = base_url + endpoint;
-  return page.goto(url);
+  return page.goto(`https://automationexercise.com${endpoint}`, {
+    waitUntil: 'domcontentloaded',
+    timeout: 45000,
+  });
 }
-
-
 
 // Generate random email
 function generateRandomEmail() {

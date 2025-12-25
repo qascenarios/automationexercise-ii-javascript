@@ -25,7 +25,6 @@ test('Add product to cart flow', async ({page}) => {
     for (const term of searchInput) {
       await searchProductPage.enterSearchProduct(term);
       await searchProductPage.clickSearch();
-      await page.waitForTimeout(2000);
       await addProductToCartPage.addFirstProductToCart();
     }
     await addProductToCartPage.viewCart()

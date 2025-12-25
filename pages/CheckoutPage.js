@@ -3,7 +3,7 @@ import { BasePage } from './BasePage';
 class CheckoutPage extends BasePage {
     constructor(page){
         super(page);
-        this.PROCEED_TO_CHECKOUT_BUTTON = page.getByText('Proceed To Checkout');
+        this.PROCEED_TO_CHECKOUT_BUTTON = page.locator('text=Proceed To Checkout');
         this.PLACE_ORDER_BUTTON = page.getByRole('link', { name: 'Place Order' });
         this.NAME_ON_CARD_INPUT = page.locator('input[name="name_on_card"]');
         this.CARD_NUMBER_INPUT = page.locator('input[name="card_number"]');
