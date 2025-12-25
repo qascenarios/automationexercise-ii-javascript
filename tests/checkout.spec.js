@@ -27,6 +27,7 @@ test('Add product to cart flow', async ({page}) => {
       await searchProductPage.enterSearchProduct(term);
       await searchProductPage.clickSearch();
       await addProductToCartPage.addFirstProductToCart();
+      await addProductToCartPage.clickContinueShopping();
     }
     await addProductToCartPage.viewCart()
 
