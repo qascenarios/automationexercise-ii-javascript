@@ -21,6 +21,7 @@ class LoginPage extends BasePage {
     async clickLogin() {
         await this.LOGIN_BUTTON.click();
     }
+    
 
     async isLogoutButtonVisible(text) {
         await expect(this.LOGOUT_BUTTON).toHaveText(text);
