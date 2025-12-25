@@ -1,4 +1,4 @@
-[![Playwright Tests](https://github.com/qascenarios/automationexercise-ii-javascript/actions/workflows/playwright-allure.yml/badge.svg)](https://github.com/qascenarios/automationexercise-ii/actions/workflows/playwright-allure.yml)
+[![Playwright Tests](https://github.com/qascenarios/automationexercise-ii-javascript/actions/workflows/playwright.yml/badge.svg)](https://github.com/qascenarios/automationexercise-ii-javascript/actions/workflows/playwright.yml)
 
 # Playwright JavaScript End-to-End Tests – Automation Exercise
 
@@ -63,34 +63,52 @@ cd automationexercise-ii-javascript
 ```
 
 ### Install dependencies
+```bash
 npm install
+```
 
 ### Install Playwright browsers
+```bash
 npx playwright install
+```
 
 ## Running Tests
 
 ### Run all tests (headless)
+```bash
 npx playwright test
+```
 
 ### Run tests in headed (UI) mode
+```bash
 npx playwright test --headed
+```
 
 ### Run tests in a specific browser
+```bash
 npx playwright test --project=chromium
 npx playwright test --project=firefox
 npx playwright test --project=webkit
+```
 
 ### Run a specific test file
+```bash
 npx playwright test tests/login.spec.js
+```
 
 ### Run in Playwright UI mode (debugging)
+```bash
 npx playwright test --ui
+```
 
 ## Test Reports (Allure)
 
 ### Generate Allure results
+```bash
 npx playwright test --reporter=line,allure-playwright
+```
 
 ### Serve the Allure report
+```bash
 allure serve allure-results
+```
