@@ -23,6 +23,7 @@ test('Add product to cart flow', async ({page}) => {
     await addProductToCartPage.navigateToProductsPage();
     const searchInput = ['Blue Top', 'Stylish Dress', 'Fancy Green Top'];
     for (const term of searchInput) {
+      await addProductToCartPage.handleDialog();
       await searchProductPage.enterSearchProduct(term);
       await searchProductPage.clickSearch();
       await addProductToCartPage.addFirstProductToCart();
