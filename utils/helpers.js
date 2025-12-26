@@ -1,9 +1,6 @@
 
 function openUrl(page, endpoint) {
-  return page.goto(`https://automationexercise.com${endpoint}`, {
-    waitUntil: 'domcontentloaded',
-    timeout: 45000,
-  });
+  return page.goto(`https://automationexercise.com${endpoint}`);
 }
 
 // Generate random email
